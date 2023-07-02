@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "143af8da-d18b-4bf2-8ae0-3372f2602c6a",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17907855"
+	},
+	"item": [
+		{
+			"name": "Fetch all notes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sid\": \"50bda06a-51b4-45b4-914b-cb9d63d35a9d\",\n    \"id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/notes?sid=50bda06a-51b4-45b4-914b-cb9d63d35a9d",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"notes"
+					],
+					"query": [
+						{
+							"key": "sid",
+							"value": "50bda06a-51b4-45b4-914b-cb9d63d35a9d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a note",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sid\": \"50bda06a-51b4-45b4-914b-cb9d63d35a9d\",\n    \"note\": \"New message add\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/v1/notes"
+			},
+			"response": []
+		},
+		{
+			"name": "Login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"Emailtestdummty@gmail.com\",\n    \"password\": \"harsh123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/v1/user/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Signup User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Harshit\",\n    \"email\": \"Email12213easd3@gmail.com\",\n    \"password\": \"harsh123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/v1/user/signup"
+			},
+			"response": []
+		},
+		{
+			"name": "Remove note",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sid\": \"50bda06a-51b4-45b4-914b-cb9d63d35a9d\",\n    \"id\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/v1/notes"
+			},
+			"response": []
+		}
+	]
+}
